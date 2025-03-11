@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitGearPro - Expert Home Fitness Equipment Reviews</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .logo span {
+            color: #ff6b35;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: #333;
+            font-weight: 500;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: #e9f2fc;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #666;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6b35;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #e55a2b;
+            text-decoration: none;
+        }
+        
+        /* Featured Products */
+        .featured-products {
+            padding: 40px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #333;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-content {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .product-rating {
+            color: #ff9900;
+        }
+        
+        .product-price {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .product-button {
+            display: block;
+            background-color: #ff6b35;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .product-button:hover {
+            background-color: #e55a2b;
+            text-decoration: none;
+        }
+        
+        /* Popular Categories */
+        .categories {
+            padding: 40px 0;
+            background-color: #f0f4f8;
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .category-card {
+            background-color: #fff;
+            border-radius: 8px;
+            text-align: center;
+            padding: 30px 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #ff6b35;
+        }
+        
+        .category-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Recent Reviews */
+        .recent-reviews {
+            padding: 60px 0;
+        }
+        
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .review-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .review-image {
+            height: 200px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .review-content {
+            padding: 25px;
+        }
+        
+        .review-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .review-excerpt {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .read-more {
+            font-weight: 600;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background-color: #2c3e50;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .newsletter h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #ddd;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 15px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .newsletter-button {
+            background-color: #ff6b35;
+            color: white;
+            padding: 0 25px;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .newsletter-button:hover {
+            background-color: #e55a2b;
+        }
+        
+        /* Affiliate Disclaimer */
+        .affiliate-disclaimer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* Ad Spaces */
+        .ad-container {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px dashed #ccc;
+            text-align: center;
+        }
+        
+        .ad-container p {
+            margin-bottom: 10px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .ad-large {
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #eee;
+        }
+        
+        .ad-sidebar {
+            height: 600px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero {
+                padding: 40px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-input {
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-button {
+                border-radius: 4px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Fit<span>GearPro</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="guides.html">Buying Guides</a></li>
+                    <li><a href="comparison.html">Comparisons</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Find the Perfect Fitness Equipment for Your Home Gym</h1>
+            <p>Expert reviews, in-depth guides, and honest recommendations to help you make informed buying decisions.</p>
+            <a href="#featured-products" class="cta-button">Explore Top-Rated Equipment</a>
+        </div>
+    </section>
+    
+    <!-- Ad Space - Leaderboard -->
+    <div class="container">
+        <div class="ad-container">
+            <p>Ad Space - Leaderboard (728×90)</p>
+            <div class="ad-large">Ad Unit - Replace with your ad code</div>
+        </div>
+    </div>
+    
+    <!-- Featured Products Section -->
+    <section id="featured-products" class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Top-Rated Fitness Equipment</h2>
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/200" alt="Treadmill XR-500" />
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">ProForm Carbon T7 Treadmill</h3>
+                        <p class="product-description">Feature-rich folding treadmill with 7-inch touchscreen, 20 workout programs, and 12% incline capability.</p>
+                        <div class="product-meta">
+                            <div class="product-rating">★★★★★ (4.7/5)</div>
+                            <div class="product-price">$899.99</div>
+                        </div>
+                        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK" class="product-button">Check Price</a>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/200" alt="Adjustable Dumbbells" />
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Bowflex SelectTech 552 Adjustable Dumbbells</h3>
+                        <p class="product-description">Space-saving adjustable dumbbells that replace 15 sets, adjustable from 5 to 52.5 pounds.</p>
+                        <div class="product-meta">
+                            <div class="product-rating">★★★★☆ (4.5/5)</div>
+                            <div class="product-price">$429.99</div>
+                        </div>
+                        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK" class="product-button">Check Price</a>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/200" alt="Exercise Bike" />
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Schwinn IC4 Indoor Cycling Bike</h3>
+                        <p class="product-description">Premium indoor cycling experience with 100 resistance levels, Bluetooth connectivity, and compatibility with fitness apps.</p>
+                        <div class="product-meta">
+                            <div class="product-rating">★★★★☆ (4.3/5)</div>
+                            <div class="product-price">$799.99</div>
+                        </div>
+                        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK" class="product-button">Check Price</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Popular Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Browse By Category</h2>
+            <div class="category-grid">
+                <!-- Category 1 -->
+                <a href="category-cardio.html" class="category-card">
+                    <div class="category-icon">🏃</div>
+                    <h3 class="category-title">Cardio Equipment</h3>
+                    <p>Treadmills, ellipticals, exercise bikes, and more</p>
+                </a>
+                
+                <!-- Category 2 -->
+                <a href="category-strength.html" class="category-card">
+                    <div class="category-icon">💪</div>
+                    <h3 class="category-title">Strength Training</h3>
+                    <p>Weight benches, home gyms, free weights</p>
+                </a>
+                
+                <!-- Category 3 -->
+                <a href="category-yoga.html" class="category-card">
+                    <div class="category-icon">🧘</div>
+                    <h3 class="category-title">Yoga & Pilates</h3>
+                    <p>Mats, blocks, reformers, and accessories</p>
+                </a>
+                
+                <!-- Category 4 -->
+                <a href="category-accessories.html" class="category-card">
+                    <div class="category-icon">⚙️</div>
+                    <h3 class="category-title">Accessories</h3>
+                    <p>Resistance bands, fitness trackers, gym flooring</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Recent Reviews Section -->
+    <section class="recent-reviews">
+        <div class="container">
+            <h2 class="section-title">Latest Reviews & Guides</h2>
+            
+            <div class="review-grid">
+                <!-- Review 1 -->
+                <article class="review-card">
+                    <div class="review-image">
+                        <img src="/api/placeholder/350/200" alt="Best Treadmills Guide" />
+                    </div>
+                    <div class="review-content">
+                        <h3 class="review-title">Best Treadmills for Home Use in 2025</h3>
+                        <p class="review-excerpt">We tested 15 popular treadmills to find the best options for every budget and fitness level. Our top picks offer the perfect balance of features, durability, and value.</p>
+                        <a href="best-treadmills-guide.html" class="read-more">Read Full Guide →</a>
+                    </div>
+                </article>
+                
+                <!-- Review 2 -->
+                <article class="review-card">
+                    <div class="review-image">
+                        <img src="/api/placeholder/350/200" alt="Home Gym Comparison" />
+                    </div>
+                    <div class="review-content">
+                        <h3 class="review-title">Peloton vs. NordicTrack: Which Connected Fitness System is Right for You?</h3>
+                        <p class="review-excerpt">A detailed comparison of these popular connected fitness platforms, including equipment quality, class offerings, subscription costs, and user experience.</p>
+                        <a href="peloton-vs-nordictrack.html" class="read-more">Read Full Comparison →</a>
+                    </div>
+                </article>
+                
+                <!-- Review 3 -->
+                <article class="review-card">
+                    <div class="review-image">
+                        <img src="/api/placeholder/350/200" alt="Beginner Home Gym" />
+                    </div>
+                    <div class="review-content">
+                        <h3 class="review-title">Building Your First Home Gym: Essential Equipment for Beginners</h3>
+                        <p class="review-excerpt">Start your fitness journey with our curated list of essential equipment. Get maximum results without breaking the bank or overwhelming your space.</p>
+                        <a href="beginner-home-gym-guide.html" class="read-more">Read Full Guide →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Ad Space - Large Rectangle -->
+    <div class="container">
+        <div class="ad-container">
+            <p>Ad Space - Large Rectangle (336×280)</p>
+            <div class="ad-large">Ad Unit - Replace with your ad code</div>
+        </div>
+    </div>
+    
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Get Expert Fitness Tips & Exclusive Deals</h2>
+            <p>Join our community and receive the latest reviews, buying guides, and special offers directly to your inbox.</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Affiliate Disclaimer -->
+    <div class="affiliate-disclaimer">
+        <div class="container">
+            <p>FitGearPro is reader-supported. When you buy through links on our site, we may earn an affiliate commission. Learn more about our affiliate policy <a href="affiliate-disclosure.html">here</a>.</p>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Column 1 -->
+                <div class="footer-column">
+                    <h3>FitGearPro</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="methodology.html">Review Methodology</a></li>
+                        <li><a href="careers.html">Join Our Team</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 2 -->
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="category-cardio.html">Cardio Equipment</a></li>
+                        <li><a href="category-strength.html">Strength Training</a></li>
+                        <li><a href="category-yoga.html">Yoga & Pilates</a></li>
+                        <li><a href="category-accessories.html">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="buying-guides.html">Buying Guides</a></li>
+                        <li><a href="blog.html">Fitness Blog</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="workout-plans.html">Workout Plans</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FitGearPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

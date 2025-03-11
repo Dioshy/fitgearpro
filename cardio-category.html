@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Cardio Equipment Reviews & Guides | FitGearPro</title>
+    <meta name="description" content="Expert reviews and buying guides for treadmills, ellipticals, exercise bikes, and more. Find the perfect cardio equipment for your home gym.">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .logo span {
+            color: #ff6b35;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: #333;
+            font-weight: 500;
+        }
+        
+        /* Category Hero */
+        .category-hero {
+            background-color: #e9f2fc;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        
+        .category-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .category-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        /* Breadcrumbs */
+        .breadcrumbs {
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .breadcrumbs a {
+            color: #666;
+        }
+        
+        .breadcrumbs span {
+            margin: 0 8px;
+        }
+        
+        /* Category Intro */
+        .category-intro {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .category-intro h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .category-intro p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        /* Featured Products */
+        .featured-products {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            color: #333;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-content {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .product-rating {
+            color: #ff9900;
+        }
+        
+        .product-price {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .product-button {
+            display: block;
+            background-color: #ff6b35;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .product-button:hover {
+            background-color: #e55a2b;
+            text-decoration: none;
+        }
+        
+        /* Subcategories */
+        .subcategories {
+            margin-bottom: 50px;
+        }
+        
+        .subcategory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .subcategory-card {
+            background-color: #fff;
+            border-radius: 8px;
+            text-align: center;
+            padding: 30px 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .subcategory-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .subcategory-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #ff6b35;
+        }
+        
+        /* Reviews and Articles */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .review-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .review-image {
+            height: 200px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .review-content {
+            padding: 25px;
+        }
+        
+        .review-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .review-excerpt {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .read-more {
+            font-weight: 600;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-item {
+            margin-bottom: 25px;
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .faq-answer {
+            color: #555;
+        }
+        
+        /* Ad Spaces */
+        .ad-container {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px dashed #ccc;
+            text-align: center;
+        }
+        
+        .ad-container p {
+            margin-bottom: 10px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .ad-large {
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #eee;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background-color: #2c3e50;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .newsletter h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #ddd;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 15px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .newsletter-button {
+            background-color: #ff6b35;
+            color: white;
+            padding: 0 25px;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .newsletter-button:hover {
+            background-color: #e55a2b;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .category-hero {
+                padding: 40px 0;
+            }
+            
+            .category-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-input {
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-button {
+                border-radius: 4px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Fit<span>GearPro</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="guides.html">Buying Guides</a></li>
+                    <li><a href="comparison.html">Comparisons</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Category Hero -->
+    <section class="category-hero">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> <span>›</span> Cardio Equipment
+            </div>
+            <h1>Cardio Equipment Reviews & Buying Guides</h1>
+            <p>Expert reviews, comparisons, and buying advice for treadmills, ellipticals, exercise bikes, rowing machines, and more.</p>
+        </div>
+    </section>
+    
+    <!-- Category Intro -->
+    <div class="container">
+        <div class="category-intro">
+            <h2>Why Cardio Equipment Is Essential for Your Home Gym</h2>
+            <p>Cardio equipment forms the foundation of most home gyms, providing effective workouts that improve heart health, burn calories, and build endurance. Whether you're looking to lose weight, improve fitness, or train for specific events, the right cardio machine can make all the difference.</p>
+            <p>Our comprehensive reviews and buying guides help you navigate the vast market of home cardio equipment, considering factors like space requirements, workout intensity, joint impact, and technology features to find your perfect match.</p>
+        </div>
+    </div>
+    
+    <!-- Ad Space - Leaderboard -->
+    <div class="container">
+        <div class="ad-container">
+            <p>Ad Space - Leaderboard (728×90)</p>
+            <div class="ad-large">Ad Unit - Replace with your ad code</div>
+        </div>
+    </div>
+    
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Top-Rated Cardio Equipment</h2>
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/200" alt="NordicTrack Commercial 1750 Treadmill" />
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">NordicTrack Commercial 1750 Treadmill</h3>
+                        <p class="product-description">Premium treadmill with a 10" HD touchscreen, -3% to 15% incline range, and iFit compatibility for interactive training.</p>
+                        <div class="product-meta">
+                            <div class="product-rating">★★★★★ (4.8/5)</div>
+                            <div class="product-price">$1,799.99</div>
+                        </div>
+                        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK" class="product-button">Check Price</a>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/200" alt="Schwinn IC4 Indoor Cycling Bike" />
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Schwinn IC4 Indoor Cycling Bike</h3>
+                        <p class="product-description">Feature-rich indoor cycling bike with 100 resistance levels, dual-sided pedals, and Bluetooth connectivity for app integration.</p>
+                        <div class="product-meta">
+                            <div class="product-rating">★★★★☆ (4.6/5)</div>
+                            <div class="product-price">$799.99</div>
+                        </div>
+                        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK" class="product-button">Check Price</a>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/300/200" alt="Concept2 Model D Rowing Machine" />
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Concept2 Model D Rowing Machine</h3>
+                        <p class="product-description">The gold standard of rowing machines with a performance monitor, smooth air resistance, and durable construction.</p>
+                        <div class="product-meta">
+                            <div class="product-rating">★★★★★ (4.9/5)</div>
+                            <div class="product-price">$945.00</div>
+                        </div>
+                        <a href="https://www.amazon.com/YOUR-AFFILIATE-LINK" class="product-button">Check Price</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Subcategories -->
+    <section class="subcategories">
+        <div class="container">
+            <h2 class="section-title">Browse Cardio Equipment by Type</h2>
+            <div class="subcategory-grid">
+                <!-- Subcategory 1 -->
+                <a href="treadmills.html" class="subcategory-card">
+                    <div class="subcategory-icon">🏃</div>
+                    <h3>Treadmills</h3>
+                    <p>From space-saving folding models to commercial-grade machines</p>
+                </a>
+                
+                <!-- Subcategory 2 -->
+                <a href="exercise-bikes.html" class="subcategory-card">
+                    <div class="subcategory-icon">🚴</div>
+                    <h3>Exercise Bikes</h3>
+                    <p>Upright, recumbent, and indoor cycling options</p>
+                </a>
+                
+                <!-- Subcategory 3 -->
+                <a href="ellipticals.html" class="subcategory-card">
+                    <div class="subcategory-icon">⚙️</div>
+                    <h3>Ellipticals</h3>
+                    <p>Low-impact trainers for full-body workouts</p>
+                </a>
+                
+                <!-- Subcategory 4 -->
+                <a href="rowing-machines.html" class="subcategory-card">
+                    <div class="subcategory-icon">🚣</div>
+                    <h3>Rowing Machines</h3>
+                    <p>Full-body cardio with minimal joint stress</p>
+                </a>
+                
+                <!-- Subcategory 5 -->
+                <a href="stair-climbers.html" class="subcategory-card">
+                    <div class="subcategory-icon">🪜</div>
+                    <h3>Stair Climbers</h3>
+                    <p>Simulate stair climbing for intense lower body workouts</p>
+                </a>
+                
+                <!-- Subcategory 6 -->
+                <a href="cardio-accessories.html" class="subcategory-card">
+                    <div class="subcategory-icon">⌚</div>
+                    <h3>Cardio Accessories</h3>
+                    <p>Heart rate monitors, mats, and equipment maintenance</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Reviews and Articles -->
+    <div class="container">
+        <h2 class="section-title">Latest Cardio Equipment Reviews & Guides</h2>
+        <div class="reviews-grid">
+            <!-- Review 1 -->
+            <article class="review-card">
+                <div class="review-image">
+                    <img src="/api/placeholder/350/200" alt="Best Treadmills for Runners" />
+                </div>
+                <div class="review-content">
+                    <h3 class="review-title">10 Best Treadmills for Serious Runners (2025)</h3>
+                    <p class="review-excerpt">Discover treadmills that can handle intense training with features like powerful motors, cushioned decks, and advanced training programs designed for runners.</p>
+                    <a href="best-treadmills-runners.html" class="read-more">Read Full Guide →</a>
+                </div>
+            </article>
+            
+            <!-- Review 2 -->
+            <article class="review-card">
+                <div class="review-image">
+                    <img src="/api/placeholder/350/200" alt="Peloton Alternative" />
+                </div>
+                <div class="review-content">
+                    <h3 class="review-title">5 Best Peloton Alternatives That Won't Break the Bank</h3>
+                    <p class="review-excerpt">We compare affordable indoor cycling bikes that offer similar features to Peloton without the premium price tag, including app compatibility and training options.</p>
+                    <a href="best-peloton-alternatives.html" class="read-more">Read Full Comparison →</a>
+                </div>
+            </article>
+            
+            <!-- Review 3 -->
+            <article class="review-card">
+                <div class="review-image">
+                    <img src="/api/placeholder/350/200" alt="Compact Cardio Equipment" />
+                </div>
+                <div class="review-content">
+                    <h3 class="review-title">Best Cardio Equipment for Small Spaces: Complete Guide</h3>
+                    <p class="review-excerpt">Limited on space? Discover treadmills, bikes, and ellipticals designed specifically for apartments and small home gyms without compromising on quality.</p>
+                    <a href="cardio-equipment-small-spaces.html" class="read-more">Read Full Guide →</a>
+                </div>
+            </article>
+            
+            <!-- Review 4 -->
+            <article class="review-card">
+                <div class="review-image">
+                    <img src="/api/placeholder/350/200" alt="Cardio for Seniors" />
+                </div>
+                <div class="review-content">
+                    <h3 class="review-title">Best Low-Impact Cardio Machines for Seniors & Joint Health</h3>
+                    <p class="review-excerpt">Our experts review cardio equipment specifically designed for older adults and those with joint concerns, focusing on safety, stability, and effectiveness.</p>
+                    <a href="cardio-equipment-seniors.html" class="read-more">Read Full Guide →</a>
+                </div>
+            </article>
+            
+            <!-- Review 5 -->
+            <article class="review-card">
+                <div class="review-image">
+                    <img src="/api/placeholder/350/200" alt="Budget Cardio Equipment" />
+                </div>
+                <div class="review-content">
+                    <h3 class="review-title">Best Budget Cardio Equipment Under $500</h3>
+                    <p class="review-excerpt">Quality cardio machines don't have to cost a fortune. We've tested and reviewed affordable options that deliver reliable performance without breaking the bank.</p>
+                    <a href="budget-cardio-equipment.html" class="read-more">Read Full Guide →</a>
+                </div>
+            </article>
+            
+            <!-- Review 6 -->
+            <article class="review-card">
+                <div class="review-image">
+                    <img src="/api/placeholder/350/200" alt="Rowing Machine Comparison" />
+                </div>
+                <div class="review-content">
+                    <h3 class="review-title">Concept2 vs. WaterRower: Which Premium Rowing Machine Reigns Supreme?</h3>
+                    <p class="review-excerpt">An in-depth comparison of two industry-leading rowing machines, analyzing resistance types, build quality, monitoring features, and overall workout experience.</p>
+                    <a href="concept2-vs-waterrower.html" class="read-more">Read Full Comparison →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+    
+    <!-- FAQ Section -->
+    <div class="container">
+        <div class="faq-section">
+            <h2 class="section-title">Frequently Asked Questions About Cardio Equipment</h2>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">What's the best cardio machine for weight loss?</h3>
+                <p class="faq-answer">While all cardio machines can contribute to weight loss when used consistently, treadmills and rowing machines typically burn the most calories per hour due to their full-body engagement. The most effective machine, however, is the one you'll use regularly. Consider factors like impact on joints, enjoyment, and available space when choosing equipment specifically for weight loss goals.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">How much should I expect to spend on quality cardio equipment?</h3>
+                <p class="faq-answer">Quality cardio equipment varies widely in price depending on the type, features, and build quality. Entry-level machines with basic functionality typically start around $300-600, mid-range equipment with improved durability and features ranges from $700-1,500, while premium commercial-grade machines can cost $2,000-4,000+. Treadmills and ellipticals tend to be more expensive than exercise bikes and rowing machines due to their more complex mechanisms.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">What's the difference between magnetic and air resistance in cardio machines?</h3>
+                <p class="faq-answer">Magnetic resistance uses magnets to create tension, offering smooth, consistent, and silent operation with easily adjustable resistance levels. This type is common in exercise bikes and ellipticals. Air resistance (fan-based) increases as you work harder, providing unlimited resistance that responds to your effort. It's popular in rowing machines and air bikes, generating more noise but delivering a more natural feeling workout that automatically adapts to your intensity.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">Are folding cardio machines less sturdy than non-folding ones?</h3>
+                <p class="faq-answer">While folding cardio machines were once significantly less durable than their non-folding counterparts, modern folding designs have largely closed this gap. Today's quality folding treadmills and exercise bikes use robust locking mechanisms and reinforced frames that provide excellent stability during use. That said, the highest-end commercial-grade equipment typically doesn't fold, as these machines prioritize maximum durability and stability over space-saving features.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">Do I need to pay for fitness subscriptions with modern cardio equipment?</h3>
+                <p class="faq-answer">While many newer cardio machines offer integrated screens with subscription-based workout content (like iFit, Peloton, or Echelon), these subscriptions are typically optional. Most equipment will function perfectly well without a subscription, offering manual controls and basic workout programs. If you prefer guided workouts but want to avoid subscription costs, look for machines that support tablet mounts so you can use free fitness apps or YouTube videos while exercising.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Ad Space - Large Rectangle -->
+    <div class="container">
+        <div class="ad-container">
+            <p>Ad Space - Large Rectangle (336×280)</p>
+            <div class="ad-large">Ad Unit - Replace with your ad code</div>
+        </div>
+    </div>
+    
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Get Exclusive Cardio Equipment Deals & Reviews</h2>
+            <p>Join our community to receive the latest reviews, buying guides, and special offers directly to your inbox.</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Column 1 -->
+                <div class="footer-column">
+                    <h3>FitGearPro</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="methodology.html">Review Methodology</a></li>
+                        <li><a href="careers.html">Join Our Team</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 2 -->
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="category-cardio.html">Cardio Equipment</a></li>
+                        <li><a href="category-strength.html">Strength Training</a></li>
+                        <li><a href="category-yoga.html">Yoga & Pilates</a></li>
+                        <li><a href="category-accessories.html">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="buying-guides.html">Buying Guides</a></li>
+                        <li><a href="blog.html">Fitness Blog</a></li>
